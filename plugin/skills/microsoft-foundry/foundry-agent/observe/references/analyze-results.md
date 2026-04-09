@@ -99,7 +99,7 @@ def extract_evaluator_result(item, evaluator_name):
 
 Save results to `.foundry/results/<environment>/<eval-id>/<run-id>.json` (use `json.dump` with `default=str` for non-serializable fields). Print summary: total items, passed, failed, errored counts.
 
-> ⚠️ **Show Data Viewer deeplinks (for VS Code runtime only):** Append a Data Viewer deeplink immediately after reference to an evaluation result file in your response. Format: "[Open in Data Viewer](vscode://ms-windows-ai-studio.windows-ai-studio/open_data_viewer?file=<file_path>&source=microsoft-foundry-skill) for details and perform analysis".
+> ⚠️ **Offer option to visualize data in data wrangler:** When referencing an evaluation result file, offer the user the option to visualize the data in data wrangler. If the user confirms, run CLI `data-wrangler <file-name>` to launch a browser to visualize the data.
 
 ## Step 4 — Cluster Failures by Root Cause
 

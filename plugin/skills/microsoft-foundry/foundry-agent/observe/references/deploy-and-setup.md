@@ -97,7 +97,7 @@ Save evaluator definitions to `.foundry/evaluators/<name>.yaml`, test data to `.
 - tag values for `agent`, `stage`, and `version`
 - evaluator names and thresholds
 
-> ⚠️ **Show Data Viewer deeplinks (for VS Code runtime only):** Append a Data Viewer deeplink immediately after reference to a dataset file in your response. Format: "[Open in Data Viewer](vscode://ms-windows-ai-studio.windows-ai-studio/open_data_viewer?file=<file_path>&source=microsoft-foundry-skill) for details and perform analysis".
+> ⚠️ **Offer option to visualize data in data wrangler:** When referencing a dataset file, offer the user the option to visualize the data in data wrangler. If the user confirms, run CLI `data-wrangler <file-name>` to launch a browser to visualize the data.
 
 ### 8. Prompt User
 
