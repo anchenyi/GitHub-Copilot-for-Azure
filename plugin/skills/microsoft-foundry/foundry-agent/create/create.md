@@ -18,6 +18,7 @@ Create new hosted agent applications for Microsoft Foundry, or convert existing 
 - Start from an official sample and customize it
 - Convert an existing agent project to be Foundry-compatible (brownfield)
 - Help user choose a framework or sample for their agent
+- Debug or test a hosted agent locally (run agent with `agentdev`)
 
 ## Workflow
 

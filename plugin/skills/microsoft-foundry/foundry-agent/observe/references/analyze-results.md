@@ -99,8 +99,6 @@ def extract_evaluator_result(item, evaluator_name):
 
 Save results to `.foundry/results/<environment>/<eval-id>/<run-id>.json` (use `json.dump` with `default=str` for non-serializable fields). Print summary: total items, passed, failed, errored counts.
 
-> ⚠️ **Offer option to visualize data in data wrangler:** When referencing an evaluation result file, offer the user the option to visualize the data in data wrangler. If the user confirms, run CLI `data-wrangler <file-name>` to launch a browser to visualize the data.
-
 ## Step 4 — Cluster Failures by Root Cause
 
 Analyze every row in the results. Group failures into clusters:
@@ -125,6 +123,8 @@ Produce a prioritized action table:
 | P4 | Safety violations | Add guardrails to instructions |
 
 **Rule:** Prioritize runtime errors first, then sort by test-case priority (`P0` before `P1` before `P2`) and count × severity.
+
+When presenting next-step options after clustering, always include **"Visualize results in Data Wrangler"** as one of the choices. If the user selects it, run `data-wrangler <results-file>` to launch a browser to visualize the data.
 
 ## Step 5 — Dive Into Category
 
