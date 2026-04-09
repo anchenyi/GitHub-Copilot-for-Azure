@@ -72,7 +72,7 @@ Agent Framework supports single-agent and multi-agent workflow patterns using gr
 
 For workflow samples and advanced patterns, search the [Agent Framework GitHub repo](https://github.com/microsoft/agent-framework).
 
-## Debugging
+## Inspect Locally
 
 Run the agent locally with `agentdev`:
 
@@ -80,7 +80,7 @@ Run the agent locally with `agentdev`:
 python -m agentdev run <entrypoint>.py
 ```
 
-This starts the agent in the background and opens a browser-based UI for local testing and debugging.
+This starts the agent in the background and opens a browser-based UI for local testing and inspection.
 
 ## Common Errors
 

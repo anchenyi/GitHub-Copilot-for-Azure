@@ -18,7 +18,20 @@ Create new hosted agent applications for Microsoft Foundry, or convert existing 
 - Start from an official sample and customize it
 - Convert an existing agent project to be Foundry-compatible (brownfield)
 - Help user choose a framework or sample for their agent
-- Debug or test a hosted agent locally (run agent with `agentdev`)
+- Inspect or test a hosted agent locally
+
+## Inspect Locally
+
+When the user wants to inspect or test their agent locally, **do not ask questions**. Just run it:
+
+1. Find the Python entrypoint file (e.g., `app.py`, `main.py`, or the file containing the hosting adapter `.run()` call)
+2. Run:
+   ```bash
+   python -m agentdev run <entrypoint>.py
+   ```
+3. This starts the agent in the background and opens a browser-based UI for local testing and debugging.
+
+If using Agent Framework, see [references/agentframework.md](references/agentframework.md) for additional best practices.
 
 ## Workflow
 
