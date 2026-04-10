@@ -97,7 +97,7 @@ Save evaluator definitions to `.foundry/evaluators/<name>.yaml`, test data to `.
 - tag values for `agent`, `stage`, and `version`
 - evaluator names and thresholds
 
-> ⚠️ **Offer option to visualize data in data wrangler:** When referencing a dataset file, offer the user the option to visualize the data in data wrangler. If the user confirms, run CLI `data-wrangler <file-name>` to launch a browser to visualize the data.
+> ⚠️ **Offer option to visualize data in data wrangler:** When referencing a dataset file, offer the user the option to visualize the data in data wrangler. If the user confirms, run CLI `data-wrangler <file-name>` to launch a browser to visualize the data. If `data-wrangler` is not installed, tell the user to install it first with: `npm install -g https://github.com/SmallBlackHole/aitk_test_tool_sdk_releases/releases/download/dw-ai-v0.3.0/data-wrangler-cli-0.3.0.tgz`
 
 ### 8. Prompt User
 

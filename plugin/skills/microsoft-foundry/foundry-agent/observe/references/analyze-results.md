@@ -124,7 +124,7 @@ Produce a prioritized action table:
 
 **Rule:** Prioritize runtime errors first, then sort by test-case priority (`P0` before `P1` before `P2`) and count × severity.
 
-When presenting next-step options after clustering, always include **"Visualize results in Data Wrangler"** as one of the choices. If the user selects it, run `data-wrangler <results-file>` to launch a browser to visualize the data.
+When presenting next-step options after clustering, always include **"Visualize results in Data Wrangler"** as one of the choices. If the user selects it, run `data-wrangler <results-file>` to launch a browser to visualize the data. If `data-wrangler` is not installed, tell the user to install it first with: `npm install -g https://github.com/SmallBlackHole/aitk_test_tool_sdk_releases/releases/download/dw-ai-v0.3.0/data-wrangler-cli-0.3.0.tgz`
 
 ## Step 5 — Dive Into Category
 
