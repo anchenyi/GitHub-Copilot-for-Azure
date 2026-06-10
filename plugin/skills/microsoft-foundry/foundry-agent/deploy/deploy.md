@@ -127,7 +127,7 @@ Anything other than a `completed` response -> run `azd ai agent doctor --output 
 
 ### Step 5: Auto-Generate Evaluation Suite (MANDATORY — RUNS AUTOMATICALLY)
 
-This step runs automatically after deploy. The `init` command depends only on a successful deploy, so can run in parallel with invoke/test steps — generation runs server-side. Ask the user which source to use.
+This step runs automatically after deploy. Ask the user which source to use and start it right after deploy succeeds — `init` returns in seconds and generation runs server-side, so it overlaps with invoke/test steps and finishes faster overall.
 
 > *"Your agent is deployed. Want me to set up an evaluation suite now? (a) Yes — current agent instructions (synthetic Q&A), (b) Yes — historical traces (last 3 days), (c) Yes — use existing `eval.yaml`, (d) No / later."*
 
@@ -217,7 +217,7 @@ Prompt agents are not containerized -- they are a model + instructions + optiona
 
 ### Step 5: Auto-Generate Evaluation Suite (Prompt) (MANDATORY — RUNS AUTOMATICALLY)
 
-This step runs automatically after deploy. The `init` command depends only on a successful deploy, so the skill may run it in parallel with invoke/test steps — generation runs server-side. Ask the user which source to use.
+This step runs automatically after deploy. Ask the user which source to use and start it right after deploy succeeds — `init` returns in seconds and generation runs server-side, so it overlaps with invoke/test steps and finishes faster overall.
 
 > *"Your agent is deployed. Want me to set up an evaluation suite now? (a) Yes — current agent instructions (synthetic Q&A), (b) Yes — historical traces (last 3 days), (c) Yes — use existing `eval.yaml`, (d) No / later."*
 
@@ -255,7 +255,7 @@ For hosted agents, `playground_url` is in `azd ai agent show --output json`.
 
 ## After Deployment — Auto-Generate Evaluation Suite
 
-> Reference for Step 5 options (a) and (b) — `init` can run in parallel with invoke/test steps since it only depends on deploy. Options (c) and (d) skip `init` and go straight to section 3 (run) or stop.
+> Reference for Step 5 options (a) and (b) — start `init` right after deploy so its server-side generation overlaps with invoke/test steps and finishes faster. Options (c) and (d) skip `init` and go straight to section 3 (run) or stop.
 
 ### 1. Inspect existing eval.yaml
 
