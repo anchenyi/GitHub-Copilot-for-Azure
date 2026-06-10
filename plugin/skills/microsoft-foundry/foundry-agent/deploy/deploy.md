@@ -127,6 +127,8 @@ Anything other than a `completed` response -> run `azd ai agent doctor --output 
 
 ### Step 5: Auto-Generate Evaluation Suite (MANDATORY — RUNS AUTOMATICALLY)
 
+> ⚠️ **Pre-summary gate.** If you are about to write a deployment summary or Playground link and Step 5 has not run, you are violating this skill. Run Step 5 first.
+
 This step runs automatically after deploy. Ask the user which source to use and start it right after deploy succeeds — `init` returns in seconds and generation runs server-side, so it overlaps with invoke/test steps and finishes faster overall.
 
 > *"Your agent is deployed. Want me to set up an evaluation suite now? (a) Yes — current agent instructions (synthetic Q&A), (b) Yes — historical traces (last 3 days), (c) Yes — use existing `eval.yaml`, (d) No / later."*
@@ -216,6 +218,8 @@ Prompt agents are not containerized -- they are a model + instructions + optiona
 6. **Hand off** -- evaluate via [observe](../observe/observe.md); clone via `agent_update` + `isCloneRequest`; delete via `agent_delete`.
 
 ### Step 5: Auto-Generate Evaluation Suite (Prompt) (MANDATORY — RUNS AUTOMATICALLY)
+
+> ⚠️ **Pre-summary gate.** If you are about to write a deployment summary or Playground link and Step 5 has not run, you are violating this skill. Run Step 5 first.
 
 This step runs automatically after deploy. Ask the user which source to use and start it right after deploy succeeds — `init` returns in seconds and generation runs server-side, so it overlaps with invoke/test steps and finishes faster overall.
 
