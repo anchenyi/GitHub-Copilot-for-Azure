@@ -213,7 +213,7 @@ cd -                                             # back to project root for the 
 
 Run the agent locally with the service-dir venv still activated, in a **managed** background session your tooling can monitor and stop. Do not use detached shell job operators (`&`, `start /B`, `nohup`, popped windows) which orphan the process and hold files in the project.
 
-> ⚠️ **Readiness gate — do not skip.** After starting `azd ai agent run`, **watch the server log for the ready line** (e.g. `Running on http://0.0.0.0:8088`) before issuing any invoke. Local startup may take time; invoking before the socket is bound fails with `could not connect`. Do **not** diagnose with `netstat` / process listings — just poll the log, e.g., every 10 seconds.
+> ⚠️ **Readiness gate — do not skip.** After starting `azd ai agent run`, **watch the server log for the ready line** (e.g. `Running on http://0.0.0.0:8088`) before issuing any invoke. Local startup may take time; invoking before the socket is bound fails with `could not connect`. Do **not** diagnose with `netstat` / process listings, and do **not** wait long blocks (60s+) hoping it's done. Re-read the log every ~15 seconds and fire the invoke as soon as the ready line appears.
 
 ```bash
 azd ai agent run --no-inspector
