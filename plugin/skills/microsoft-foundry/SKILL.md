@@ -29,8 +29,8 @@ This skill includes specialized sub-skills for specific workflows. **Use these i
 | **observe** | Evaluate agent quality, run batch evals, analyze failures, optimize prompts, improve agent instructions, compare versions, set up CI/CD monitoring, and enable continuous production evaluation | [observe](foundry-agent/observe/observe.md) |
 | **trace** | Query traces, analyze latency/failures, correlate eval results to specific responses via App Insights `customEvents` | [trace](foundry-agent/trace/trace.md) |
 | **troubleshoot** | View hosted agent logs, query telemetry, diagnose failures | [troubleshoot](foundry-agent/troubleshoot/troubleshoot.md) |
-| **create (quick start)** | First-time / onboarding / hello-world / quickstart hosted agent. Opinionated happy-path with safe defaults; accepts overrides. For anything not covered by the quickstart, use **create**. | [create/quick-start-hosted.md](foundry-agent/create/quick-start-hosted.md) |
-| **create** | Create a new hosted Foundry agent from a curated sample or existing code, iterate locally, and add tools (web search, AI Search, MCP, A2A). | [create](foundry-agent/create/create-hosted.md) |
+| **create (quick start)** | Create a new hosted Foundry agent from scratch end-to-end — scaffold, provision a new Foundry project, deploy, and smoke-test. Opinionated happy-path that accepts common overrides (language, region, sample, topic, existing project, existing model). For anything not covered by the quickstart, use **create**. | [create/quick-start-hosted.md](foundry-agent/create/quick-start-hosted.md) |
+| **create** | Use when the standard end-to-end happy path doesn't fit — lifting existing agent code into the project, deploying outside the default code path, wiring connections at scaffold time, advanced setup, or recovering from a failed quickstart run. | [create](foundry-agent/create/create-hosted.md) |
 | **agent-optimizer** | Make existing Python hosted-agent code optimization-ready, configure eval.yaml, run Agent Optimizer jobs, apply candidates locally, and deploy through azd after review. | [agent-optimizer](foundry-agent/agent-optimizer/agent-optimizer.md) |
 | **eval-datasets** | Harvest production traces into evaluation datasets, manage dataset versions and splits, track evaluation metrics over time, detect regressions, and maintain full lineage from trace to deployment. Use for: create dataset from traces, dataset versioning, evaluation trending, regression detection, dataset comparison, eval lineage. | [eval-datasets](foundry-agent/eval-datasets/eval-datasets.md) |
 | **project/create** | Creating a new Azure AI Foundry project for hosting agents and models. Use when onboarding to Foundry or setting up new infrastructure. | [project/create/create-foundry-project.md](project/create/create-foundry-project.md) |
@@ -66,8 +66,8 @@ Match user intent to the correct agent workflow. Read each sub-skill in order be
 
 | User Intent | Workflow (read in order) |
 |-------------|------------------------|
-| First-time user / quickstart / getting started / hello-world hosted agent | [quick-start-hosted](foundry-agent/create/quick-start-hosted.md) → [deploy](foundry-agent/deploy/deploy.md) → [invoke](foundry-agent/invoke/invoke.md) |
-| Create a new agent from scratch (anything beyond the quickstart) | [create](foundry-agent/create/create-hosted.md) → [deploy](foundry-agent/deploy/deploy.md) → [invoke](foundry-agent/invoke/invoke.md) |
+| Create a new hosted agent end-to-end (scaffold + deploy + test) | [quick-start-hosted](foundry-agent/create/quick-start-hosted.md) → [deploy](foundry-agent/deploy/deploy.md) → [invoke](foundry-agent/invoke/invoke.md) |
+| Anything beyond the standard quickstart (existing code, deployment customization, scaffold-time connections, recovery) | [create](foundry-agent/create/create-hosted.md) → [deploy](foundry-agent/deploy/deploy.md) → [invoke](foundry-agent/invoke/invoke.md) |
 | Optimize existing Python hosted agent | [agent-optimizer](foundry-agent/agent-optimizer/agent-optimizer.md) → scaffold/review → eval.yaml → optimize → apply candidate → deploy → invoke |
 | Deploy an agent (code already exists) | deploy (includes eval-suite setup) → invoke → observe (evaluate/optimize) |
 | Update/redeploy an agent after code changes | deploy (includes eval-suite setup) → invoke → observe (evaluate/optimize) |
